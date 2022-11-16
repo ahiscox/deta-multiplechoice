@@ -1,0 +1,14 @@
+#result {
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+#result input {
+    font-size: 1.2em;
+    border: 0px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+}

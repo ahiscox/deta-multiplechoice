@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/results.css" />
+{% endblock %}
+
+{% block content %}
+
+<div id="result">
+{% if correct < total %}
+Unfortunately you got {{ correct }} out of {{ total }} questions correct.<br />
+Please go back and try again!
+<br />
+</div>
+
+<a class="button" href="javascript:history.back()">Back</a>
+
+{% else %}
+<script type="text/javascript">
+    function myFunction() {
+    var copyText = document.getElementById("coords");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    if (window.isSecureContext) {
+        /** Does not work without https **/
+        navigator.clipboard.writeText(copyText.value);
+    }
+    
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied coordinates to clipboard";
+    }
+
+    function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+    }
+</script>
+
+<p class="text">Good job! That was the correct answer! Here are the coordinates to the final cache:</p>
+    <p><input type="text" readonly id="coords" value="{{ coords }}"/>
+    <div class="tooltip">
+    <button onclick="myFunction()" onmouseout="outFunc()">
+    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+</div>
+{% endif %}
+
+{% endblock %}

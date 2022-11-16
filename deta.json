@@ -1,0 +1,30 @@
+{
+    "name": "geocache_multiple_choice",
+    "description": "Get coordinates by answering multiple choice questions", 
+    "runtime": "python3.9",
+    "env": [
+        {
+            "key": "HEADLINE",
+            "description": "Text that appears at the top of the page",
+            "value": "Select the answers to the questions below to get the coordinates!",
+            "required": false
+        },
+        {
+            "key": "PROJECT_KEY",
+            "description": "A unique Project Key created with the web.deta.sh interface.",
+            "value": "",
+            "required": true
+        },
+        {
+            "key": "UNIQUE_ID",
+            "description": "A unique ID for THIS FORK ONLY, do not use an ID that you've used before, only use lower case and replace spaces with underscores",
+            "required": true
+        },
+        {
+            "key": "COORDS",
+            "descripton": "Final coordinates given after correct answers. MUST match Geocaching.com value EXACTLY (no extra spaces)",
+            "required": true
+        }
+
+    ]
+}

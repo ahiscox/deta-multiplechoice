@@ -1,0 +1,59 @@
+.question {
+    width: 100%;
+}
+
+.choice {
+    /* outline: 1px solid red; */
+    font-size: 0.8em;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.choice label {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 10px;
+/*     outline: 1px solid red; */
+}
+
+.choice input[type="radio"] {
+    background-color: blue;
+    display: none;
+}
+
+input[type="radio"]:checked{
+    visibility:hidden;
+}
+
+
+.choice input[type="radio"]:checked+label {
+    background-color: #edededee;
+}
+
+.question {
+    margin-top: 20px;
+}
+
+.question fieldset {
+    padding: 5%;
+}
+
+/* .question fieldset legend {
+    padding: 0px 15px;
+} */
+
+input[type="submit"] {
+    width: 100%;
+    padding: 20px 0px;
+    margin: 30px auto;
+    font-size: 1.2em;
+}
+
+#info {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.8em;
+    margin: 75px auto;
+}

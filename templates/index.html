@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/questions.css" />
+{% endblock %}
+
+{% block content %}
+<div id="info">{{ info }}</div>
+<form action="/answer/{{ name }}" method="POST">
+    {% for question,answer in questions.items() %}
+        <div class="question">
+            <fieldset>
+                <legend>{{ question }}</legend>
+                {% for choice in answer %}
+                {% set name = range(1, 10000) | random %}
+                <div class="choice">
+                    <input type="radio" name="{{ question }}" value="{{ choice }}" id="input-{{ name }}" {% if loop.index == 1 %}checked{% endif %} />
+                    <label for="input-{{ name }}">{{ choice }}</label>
+                </div>
+                {% endfor %}
+            </fieldset>
+        </div>
+    {% endfor %}
+
+    <input type="submit" />
+    </form>
+{% endblock %}

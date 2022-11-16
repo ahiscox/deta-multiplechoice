@@ -1,29 +1,23 @@
-# README #
+# What is this? #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Quickly create a multiple question quiz for Geocaching. 
 
-### What is this repository for? ###
+# Before you get started #
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+You will need a FREE account at [Deta.sh](https://deta.sh)
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Create a project key ##
+* Login to your Deta dashboard at [web.deta.sh](https://web.deta.sh) and select "Project Keys" from the menu on the left.
+* Click the "Create Key" button, do not close the popup until you copy the Project Key field. This key will not be shown again
 
-### Contribution guidelines ###
+## Deploy to Deta ##
 
-* Writing tests
-* Code review
-* Other guidelines
+Click the button below to deploy this repository to Deta. You will be asked to fill out the following information:
+* Headline: This is the text you want to appear at the top of your quiz
+* Project Key: Paste the key that you recently copied.
+* Unique ID: Enter a unique id that you haven't used in any other Deta projects. Keep it all lowercase and use underscores instead of spaces.
+* Coords: Enter the coordinates EXACTLY as they must be typed into Geocaching.com to reveal the cache
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?https://bitbucket.org/ahisco/deta-multiplechoice)
