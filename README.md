@@ -21,4 +21,4 @@ Click the button below to deploy this repository to Deta. You will be asked to f
 * Coords: Enter the coordinates EXACTLY as they must be typed into Geocaching.com to reveal the cache
 
 
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?https://github.com/ahiscox/deta-multiplechoice)
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy)
